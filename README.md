@@ -74,7 +74,7 @@ PowerShell：
 
 
 
-##🔧 3. 本機 → Git（版本控制本體）
+## 🔧 3. 本機 → Git（版本控制本體）
 
 git初始化：
 
@@ -92,7 +92,7 @@ git commit -m "feat: initial version v1"
 沒 commit = 不能 push
 
 
-##🗂 4. GitHub Repository
+## 🗂 4. GitHub Repository
 
 GitHub 操作：
 
@@ -114,7 +114,7 @@ New Repo → Public → 名稱：vercel-cicd-demo
 
 
 
-##☁ 5. 本機 → GitHub（Push）
+## ☁ 5. 本機 → GitHub（Push）
 
 設定 remote：
 
@@ -138,7 +138,7 @@ Repository not found → repo 路徑錯 or 沒建立
 Browser Authentication → 正常（OAuth）  
 
 
-##📦 6. GitHub → Vercel（CI/CD 設定）
+## 📦 6. GitHub → Vercel（CI/CD 設定）
 
 Vercel：
 
@@ -158,7 +158,7 @@ private repo 要授權才可 deploy
 
 
 
-##🚀 7. Vercel 首次部署（CD 上線）
+## 🚀 7. Vercel 首次部署（CD 上線）
 
 按：
 
@@ -186,7 +186,7 @@ https://vercel-cicd-demo-xxxx.vercel.app
 
 Vercel 自動當 entry point  
 
-##🔁 8. CI/CD 自動更新（v2測試）
+## 🔁 8. CI/CD 自動更新（v2測試）
 
 回本機更新index.html：
 
@@ -214,7 +214,7 @@ GitHub commit → webhook → Vercel redeploy → Production 更新
 
 push main 才更新 production  
 
-##🕹 9. 回滾（Rollback）＋ Promote
+## 🕹 9. 回滾（Rollback）＋ Promote
 
 Vercel → Deployments：
 
