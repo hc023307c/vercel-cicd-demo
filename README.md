@@ -69,7 +69,18 @@ cd vercel-cicd-demo
 建立 index.html：
 PowerShell：
 ```html
-<h1>CI/CD Demo v1</h1>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>CI/CD Demo v1</title>
+</head>
+<body>
+  <h1>CI/CD Demo v1</h1>
+  <p>這是第一版：本機 → GitHub → Vercel 自動部署練習。</p>
+</body>
+</html>
+
 ```  
 
 
@@ -191,7 +202,19 @@ Vercel 自動當 entry point
 回本機更新index.html：
 
 ```html
-<h1>CI/CD Demo v2</h1>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <title>CI/CD Demo v2</title>
+</head>
+<body>
+  <h1>CI/CD Demo v2</h1>
+  <p>這是第二版：我在本機改完，push 到 GitHub，Vercel 自動重新部署。</p>
+  <p>更新時間：2026-01-15（範例）</p>
+</body>
+</html>
+
 ```
 
 提交：
