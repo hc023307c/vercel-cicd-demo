@@ -146,7 +146,18 @@ index.html
 
 Repository not found → repo 路徑錯 or 沒建立
 
-Browser Authentication → 正常（OAuth）  
+Browser Authentication → 正常（OAuth）   
+📌 避雷2：
+如果出現vercel-cicd-demo 已經寫上去導致 git名稱想修改的話
+可以先查詢 目前上傳git的project name是什麼
+
+```ps1
+git remote -v
+```   
+直接改 remote URL  
+```ps1
+git remote set-url origin https://github.com/hc023307c/vercel-cicd-demo2.git
+```
 
 
 ## 📦 6. GitHub → Vercel（CI/CD 設定）
