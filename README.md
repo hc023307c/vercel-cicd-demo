@@ -34,6 +34,7 @@ PowerShell：
 
 ```ps1
 winget install --id Git.Git -e
+```
 
 
 📌 避雷：
@@ -42,32 +43,47 @@ winget install --id Git.Git -e
 
 Git Bash 會一起裝（可忽略或使用）
 
-📍 2.2 設定 Git Identity
+
+
+### 📍 2.2 設定 Git Identity
+PowerShell：
+```ps1
 git config --global user.name "你的名字"
 git config --global user.email "你的GitHub email"
-
+```
 
 📌 避雷：
 
 email 用 GitHub 的，不然 commit 不會綁帳號
 
-📍 2.3 建本機資料夾 + 初版 v1
+
+
+### 📍 2.3 建本機資料夾 + 初版 v1
+PowerShell：
+```ps1
 mkdir vercel-cicd-demo
 cd vercel-cicd-demo
+```
 
 
 建立 index.html：
-
+PowerShell：
+```html
 <h1>CI/CD Demo v1</h1>
+```  
 
-🔧 3. 本機 → Git（版本控制本體）
 
-初始化：
 
+##🔧 3. 本機 → Git（版本控制本體）
+
+git初始化：
+
+PowerShell：
+```ps1
 git init
 git add .
 git commit -m "feat: initial version v1"
-
+```
 
 📌 避雷：
 
@@ -75,7 +91,8 @@ git commit -m "feat: initial version v1"
 
 沒 commit = 不能 push
 
-🗂 4. GitHub Repository
+
+##🗂 4. GitHub Repository
 
 GitHub 操作：
 
@@ -85,22 +102,28 @@ New Repo → Public → 名稱：vercel-cicd-demo
 不要勾：
 
 [ ] README
+
 [ ] .gitignore
+
 [ ] License
 
 
 📌 避雷：
 
-本機已有 git，不要二次初始化
+本機已有 git，不要二次初始化  
 
-☁ 5. 本機 → GitHub（Push）
+
+
+##☁ 5. 本機 → GitHub（Push）
 
 設定 remote：
 
+PowerShell：
+```ps1
 git remote add origin https://github.com/<你的帳號>/vercel-cicd-demo.git
 git branch -M main
 git push -u origin main
-
+```
 
 推上後 GitHub 出現：
 
@@ -112,9 +135,10 @@ index.html
 
 Repository not found → repo 路徑錯 or 沒建立
 
-Browser Authentication → 正常（OAuth）
+Browser Authentication → 正常（OAuth）  
 
-📦 6. GitHub → Vercel（CI/CD 設定）
+
+##📦 6. GitHub → Vercel（CI/CD 設定）
 
 Vercel：
 
@@ -130,9 +154,11 @@ Install GitHub App → Allow Selected Repositories
 
 不選 repo = Vercel 看不到
 
-private repo 要授權才可 deploy
+private repo 要授權才可 deploy  
 
-🚀 7. Vercel 首次部署（CD 上線）
+
+
+##🚀 7. Vercel 首次部署（CD 上線）
 
 按：
 
@@ -158,21 +184,24 @@ https://vercel-cicd-demo-xxxx.vercel.app
 
 不改 Output Folder
 
-Vercel 自動當 entry point
+Vercel 自動當 entry point  
 
-🔁 8. CI/CD 自動更新（v2測試）
+##🔁 8. CI/CD 自動更新（v2測試）
 
-回本機更新：
+回本機更新index.html：
 
+```html
 <h1>CI/CD Demo v2</h1>
-
+```
 
 提交：
 
+PowerShell：
+```ps1
 git add .
 git commit -m "chore: update to v2"
 git push
-
+```
 
 流程：
 
@@ -183,9 +212,9 @@ GitHub commit → webhook → Vercel redeploy → Production 更新
 
 不 push = 不部署
 
-push main 才更新 production
+push main 才更新 production  
 
-🕹 9. 回滾（Rollback）＋ Promote
+##🕹 9. 回滾（Rollback）＋ Promote
 
 Vercel → Deployments：
 
@@ -207,7 +236,7 @@ Rollback 不改 GitHub
 
 只改 production 指向（pointer）
 
-🗃 🔟 GitHub 看版本
+##🗃 10 GitHub 看版本
 
 v1 & v2 對應：
 
