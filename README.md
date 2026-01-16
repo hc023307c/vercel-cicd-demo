@@ -272,3 +272,22 @@ CD (Deploy)
 Rollback
 ↓
 Re-promote
+
+
+## 🟦 10 windows刪除git
+
+如果是照教程的話，請用以下步驟
+
+先查：
+
+winget list Git
+
+
+若看到：
+
+Git.Git
+
+
+就可以卸：
+
+winget uninstall --id Git.Git
